@@ -1,0 +1,4 @@
+autopep8==1.5
+psycopg2-binary==2.8.4
+pycodestyle==2.5.0
+uuid==1.30

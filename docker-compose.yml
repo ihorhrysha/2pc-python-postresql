@@ -1,0 +1,36 @@
+version: "3.1"
+
+services:
+  db1:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: fly
+    ports:
+      - 5431:5432
+    volumes:
+      - ./data/db1/:/var/lib/postgresql/data/
+  db2:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: hotel
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/db2/:/var/lib/postgresql/data/
+  db3:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: hotel
+    ports:
+      - 5433:5432
+    volumes:
+      - ./data/db3/:/var/lib/postgresql/data/
